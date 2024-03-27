@@ -1,23 +1,8 @@
-# GPS Drivers
+![](docs/px4_septentrio_banner.png "PX4 Septentrio banner")
 
-## Overview
+# PX4 GPS Drivers
 
-This repository contains user-space gps drivers, used as a submodule in
-[PX4-Autopilot](https://github.com/PX4/PX4-Autopilot) and
-[QGroundControl](https://github.com/mavlink/qgroundcontrol).
-
-All platform-specific stuff is done via a callback function and a
-`definitions.h` header file.
-
-In order for the project to build, `definitions.h` must include definitions for `sensor_gnss_relative_s`, `sensor_gps_s` and `satellite_info_s`.
-For example, check the implementation in [PX4 Autopilot](https://github.com/PX4/PX4-Autopilot/blob/master/src/drivers/gps/definitions.h) or [QGroundControl](https://github.com/mavlink/qgroundcontrol/blob/master/src/GPS/definitions.h). 
-
-
-## Parser tests
-
-To test parsers, build and run the cmake project:
-
-```
-cmake -Bbuild -H.
-cmake --build build && build/gps-parser-test
-```
+This repository is a fork of the official [PX4-GPSDrivers](https://github.com/PX4/PX4-Autopilot)
+with verified drivers for Septentrio receivers. It is used for Septentrio releases with features
+that are not yet available in the official releases. This repository is not used for development of
+features and bugfixes.
